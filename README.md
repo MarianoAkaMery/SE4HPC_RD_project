@@ -59,7 +59,7 @@ See the `docs/` folder for:
 | Mariano Librici        |
 | Rong Huang             | 
 | Yibo Li                | 
-| Zaochen Qiao           | 
+| Zhaochen Qiao          | 
 
 ---
 
