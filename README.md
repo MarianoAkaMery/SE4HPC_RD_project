@@ -45,7 +45,7 @@ UrbanLeaf is designed to:
 - Full traceability through logging and report generation
 - System designed for scalability and high availability
 
-See the `docs/` folder for:
+See the `Sections/` folder for:
 - 📄 Requirement analysis
 - 🧱 Component and sequence diagrams
 - 🧪 Use cases and architectural decisions
