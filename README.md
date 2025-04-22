@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MarianoAkaMery/SE4HPC_RD_project/main/Software%20Engineering%20for%20HPC%20-%20SustainCity/Images/UrbanLeaf.jpeg" alt="UrbanLeaf Logo" width="200"/>
+</p>
+
 # 🌿 UrbanLeaf – Smart Urban Mobility Management
 
 UrbanLeaf is a software system developed as part of the Software Engineering for HPC Master's course at Politecnico di Milano (A.Y. 2024/2025). The system addresses the challenges of urban traffic, environmental sustainability, and smart transportation through real-time data analysis and adaptive traffic control.
