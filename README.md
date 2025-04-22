@@ -56,7 +56,7 @@ See the `Sections/` folder for:
 
 | Name                   |
 |------------------------|
-| Mariano Librici        |
+| Salvatore Mariano Librici        |
 | Rong Huang             | 
 | Yibo Li                | 
 | Zhaochen Qiao          | 
