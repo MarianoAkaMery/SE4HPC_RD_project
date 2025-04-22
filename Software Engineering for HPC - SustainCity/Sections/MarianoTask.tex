@@ -1,0 +1,74 @@
+\section{Pattern-Based Optimization (Type 2)}
+
+\subsection*{1. Main Goal}
+
+The goal of this task is to analyze historical traffic patterns to suggest improvements that optimize city traffic flow and public transport efficiency. These include recommendations such as converting streets to one-way directions, adjusting traffic light configurations, or modifying public transport schedules during high-traffic periods.
+
+\subsection*{2. Section Goals}
+
+This section focuses on long-term and recurring improvements based on data trends. The system does not apply these suggestions automatically; instead, it generates structured proposals and submits them to urban traffic managers for approval. All suggestions are logged and used in generating the annual report.
+
+The system reuses aggregated traffic flow data collected and processed by the real-time system developed in Task 1, avoiding redundant analysis of raw sensor input.
+
+\subsection*{3. Requirement Analysis}
+
+\subsubsection*{3.1 Relevant Human and Non-Human Actors}
+
+\textbf{Human Actors:}
+\begin{itemize}
+    \item Urban Traffic Managers – review and approve or reject the system's suggestions.
+    \item Public Transport Schedulers – update transportation schedules based on accepted suggestions.
+\end{itemize}
+
+\textbf{Non-Human Actors:}
+\begin{itemize}
+    \item Public Transport Microservice – provides access to street-based and line-based timetables.
+    \item Pattern Analyzer – processes aggregated traffic data and generates optimization suggestions.
+    \item Logger – records all suggestions and their status.
+    \item Report Generator – compiles annual summaries for all Type 2 suggestions.
+    \item Traffic Data Aggregator – provides aggregated data from Task 1.
+\end{itemize}
+
+\subsubsection*{3.2 Use Cases}
+
+\begin{itemize}
+    \item Identify roads with consistent congestion patterns over time.
+    \item Suggest conversion of two-way streets to one-way to improve flow during peak hours.
+    \item Recommend modifying traffic light configurations based on frequent directional imbalance.
+    \item Suggest updates to public transport schedules to avoid congestion or align with demand.
+    \item Recommend increasing service frequency on specific lines during high-usage times.
+    \item Log all generated suggestions and whether they are accepted or rejected by managers.
+    \item Generate an annual report summarizing all Type 2 suggestions and outcomes.
+\end{itemize}
+
+\subsubsection*{3.3 Domain Assumptions}
+
+\begin{enumerate}
+    \item Aggregated traffic data is accurate, complete, and accessible from Task 1.
+    \item Public transport schedule data is available and regularly updated via microservice.
+    \item Managers are responsible for evaluating and approving suggestions.
+    \item Urban roads and lights support reconfiguration, including temporary one-way settings.
+    \item Public transport lines can be adjusted based on approved scheduling suggestions.
+\end{enumerate}
+
+\subsubsection*{3.4 Requirements}
+
+\paragraph{3.4.1 Functional Requirements}
+
+\begin{itemize}
+    \item \textbf{FR2.1:} The system shall analyze at least 30 days of historical traffic data to detect patterns of congestion.
+    \item \textbf{FR2.2:} The system shall identify roads with frequent directional imbalance and suggest them for one-way configuration during specific time ranges.
+    \item \textbf{FR2.3:} The system shall generate suggestions for updating public transport schedules to avoid recurring traffic peaks.
+    \item \textbf{FR2.4:} The system shall recommend increased service frequency on heavily loaded transport lines during rush hours.
+    \item \textbf{FR2.5:} The system shall present all suggestions to urban traffic managers for review.
+    \item \textbf{FR2.6:} The system shall log whether each suggestion was accepted or rejected by the managers.
+\end{itemize}
+
+\paragraph{3.4.2 Non-Functional Requirements}
+
+\begin{itemize}
+    \item The system shall generate an annual report listing all Type 2 suggestions and their approval status.
+    \item The system shall complete analysis of at least 30 days of historical data within 30 minutes.
+    \item Each suggestion shall be traceable, with source data references, timestamps, and decision status.
+    \item Reports must be exportable in PDF format for archival and communication purposes.
+\end{itemize}

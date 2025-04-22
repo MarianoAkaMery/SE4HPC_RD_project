@@ -1,0 +1,37 @@
+\chapter{The Project and Project Goals}
+
+\subsection{Overview}
+
+The UrbanLeaf project aims to tackle pressing global issues such as climate change and environmental sustainability, which are significantly impacted by urban transportation systems. In particular, the project focuses on reducing the negative effects of city commuting by leveraging data-driven technologies and adaptive control mechanisms.
+
+This project is part of the Software Engineering for HPC course and is designed to apply the principles of requirement engineering and architectural design learned in the first part of the course.
+
+\subsection{Project Goals}
+
+The system to be designed will analyze urban traffic conditions and apply or suggest actions that optimize transportation infrastructure. The goals are divided into three categories:
+
+\begin{itemize}
+    \item \textbf{Type 1 – Real-Time Traffic Light Adjustment:} Dynamically modify the duration of green and red lights at intersections based on live traffic conditions collected via road sensors.
+    
+    \item \textbf{Type 2 – Pattern-Based Optimization:} Analyze recurring traffic patterns to suggest optimizations such as changing road directions (e.g., one-way), traffic light configurations, and public transport schedules.
+    
+    \item \textbf{Type 3 – Event-Based Planning:} Collect information about planned large-scale public events and generate event-specific transportation plans. This includes changes in public transport, traffic light behavior, and road accessibility.
+\end{itemize}
+
+\subsection{Technical Context}
+
+The system will integrate with several existing data sources:
+\begin{itemize}
+    \item An event-based sensor infrastructure that tracks vehicle crossing times at intersections.
+    \item A microservice providing public transport schedules, with API support for querying by street or line.
+    \item A news feed or event channel that provides early notifications of upcoming events.
+\end{itemize}
+
+\subsection{Reporting and Logging}
+
+The system must also:
+\begin{itemize}
+    \item Automatically log all actions taken under Type 1.
+    \item Generate daily public reports with traffic flow data and Type 1 actions.
+    \item Generate yearly reports outlining all Type 2 and Type 3 suggestions, indicating whether they were accepted or rejected by city managers.
+\end{itemize}

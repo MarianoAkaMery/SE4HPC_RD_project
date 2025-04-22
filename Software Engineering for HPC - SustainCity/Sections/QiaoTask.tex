@@ -1,0 +1,84 @@
+\section{Event-Based Configuration (Type 3)}
+
+\subsection*{1. Main Goal}
+
+The main goal of this task is to collect and analyze information about upcoming events that are likely to attract large crowds (e.g., concerts, sports events, fairs). Based on this data, the system shall generate suggestions for event-specific configurations of traffic lights, road access, and public transport schedules to minimize congestion and ensure smooth urban mobility.
+
+\subsection*{2. Section Goals}
+
+This section focuses on planning ahead for major events by:
+\begin{itemize}
+    \item Receiving event details through a news feed or input from event organizers.
+    \item Estimating traffic impact using historical data gathered by the Task 1 system.
+    \item Suggesting changes to mobility configurations in the affected area.
+    \item Monitoring live traffic during high-impact events when needed.
+    \item Logging suggestions and decisions, and generating a yearly report.
+\end{itemize}
+
+\subsection*{3. Requirement Analysis}
+
+\subsubsection*{3.1 Relevant Human and Non-Human Actors}
+
+\textbf{Human Actors:}
+\begin{itemize}
+    \item Event Organizers – provide event details.
+    \item Urban Traffic Managers – review suggestions and activate plans.
+    \item Citizens – receive real-time navigation and routing updates via the app.
+\end{itemize}
+
+\textbf{Non-Human Actors:}
+\begin{itemize}
+    \item News Channel(on app) – provides event notifications.
+    \item Public Transport Microservice – provides schedule data and supports modifications.
+    \item Event Analyzer – evaluates event impact and generates configuration suggestions.
+    \item Logger – records all suggestions and manager decisions.
+    \item Application – communicates guidance to users and manages interaction with traffic managers.
+\end{itemize}
+
+\subsubsection*{3.2 Use Cases}
+
+\begin{itemize}
+    \item Receive event data from the News Channel or event organizers.
+    \item Analyze affected zones using historical traffic data from Task 1.
+    \item Suggest traffic light changes and temporary road restrictions.
+    \item Recommend changes to public transport routes or frequency.
+    \item Notify citizens through the application interface.
+    \item Monitor live traffic and suggest emergency plan activation if needed.
+    \item Log all suggestions and decisions for traceability.
+    \item Generate a yearly report of all Type 3 proposals and outcomes.
+\end{itemize}
+
+\subsubsection*{3.3 Domain Assumptions}
+
+\begin{enumerate}
+    \item Event data is provided with sufficient notice and detail.
+    \item Daily traffic pattern from Task 2 is accessible and reliable.
+    \item Citizens receive and obey guidance via the shared application.
+    \item Public transport services support temporary changes.
+    \item Emergency mobility plans are pre-defined and can be activated by managers.
+\end{enumerate}
+
+\subsubsection*{3.4 Requirements}
+
+\paragraph{3.4.1 Functional Requirements}
+
+\begin{itemize}
+    \item \textbf{FR3.1:} The system shall receive event data via the News Channel or organizer interface.
+    \item \textbf{FR3.2:} The Event Analyzer shall evaluate event impact using historical traffic data.
+    \item \textbf{FR3.3:} The system shall suggest event-specific traffic light configurations and road adjustments based on event plan and real time situation.
+    \item \textbf{FR3.4:} The system shall suggest updates to public transport routes or frequencies.
+    \item \textbf{FR3.5:} The system shall notify users via the application with event-related guidance.
+    \item \textbf{FR3.6:} The system shall monitor live data during events and recommend activating emergency mobility plans if needed.
+    \item \textbf{FR3.7:} All suggestions and decisions shall be recorded by the Logger.
+    \item \textbf{FR3.8:} The system shall generate an annual report of all Type 3 suggestions and approval outcomes.
+\end{itemize}
+
+\paragraph{3.4.2 Non-Functional Requirements}
+
+\begin{itemize}
+    \item Suggestions shall be generated within 1 hour of receiving event data.
+    \item Event-related updates shall be accessible via mobile and desktop platforms.
+    \item The system shall support simultaneous handling of multiple events.
+    \item Reports shall be generated App notice format and delivered to traffic managers.
+    \item Event-related interfaces shall be restricted to authorized users only.
+\end{itemize}

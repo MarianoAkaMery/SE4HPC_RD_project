@@ -1,0 +1,76 @@
+\section{Dynamic Traffic Light Adjustment (Type 1)}
+
+\subsection*{1. Main Goal}
+
+The main goal of this task is to optimize real-time urban traffic flow by dynamically adjusting traffic light durations based on sensor data. The system detects when a road is experiencing significantly more traffic than crossing roads and modifies green/red light timings accordingly to reduce congestion.
+
+\subsection*{2. Section Goals}
+
+This section focuses on designing a system that automatically monitors traffic patterns through event-based sensors and adjusts traffic lights without human intervention. All actions taken must be logged for traceability, and a daily report is generated to summarize traffic conditions and interventions. The real-time traffic status is also made available to citizens through an application, while only traffic managers have access to daily reports.
+
+\subsection*{3. Requirement Analysis}
+
+\subsubsection*{3.1 Relevant Human and Non-Human Actors}
+
+\textbf{Human Actors:}
+\begin{itemize}
+    \item Traffic Manager – accesses daily reports summarizing actions taken by the system.
+    \item Citizen – views real-time traffic conditions through the application.
+\end{itemize}
+
+\textbf{Non-Human Actors:}
+\begin{itemize}
+    \item Sensor System – provides real-time traffic data through an event-based infrastructure.
+    \item Analyzer – processes traffic data and detects imbalances.
+    \item Traffic Light System – receives and executes updated timing instructions.
+    \item Logger – records each adjustment with metadata for traceability.
+    \item Application – provides a user interface for citizens and traffic managers.
+\end{itemize}
+
+\subsubsection*{3.2 Use Cases}
+
+\begin{itemize}
+    \item Detect high-traffic roads in real time based on sensor data.
+    \item Adjust green and red light durations to relieve congestion.
+    \item Log each adjustment for traceability.
+    \item Generate and provide daily reports for traffic managers.
+    \item Display real-time traffic flow data to users via the application.
+\end{itemize}
+
+\subsubsection*{3.3 Domain Assumptions}
+
+\begin{enumerate}
+    \item Traffic sensors send reliable and periodic data via a message bus.
+    \item The Analyzer is able to interpret traffic data within a few seconds.
+    \item Traffic Light System supports dynamic configuration of light durations.
+    \item Each intersection and road is uniquely identified in the system.
+    \item Logger guarantees persistent and tamper-proof logging of actions.
+    \item Traffic managers have secure access to daily reports.
+    \item Citizens have access to the application interface to monitor real-time traffic.
+\end{enumerate}
+
+\subsubsection*{3.4 Requirements}
+
+\paragraph{3.4.1 Functional Requirements}
+
+\begin{itemize}
+    \item \textbf{FR1.1:} The system shall receive real-time traffic data from sensors at regular intervals (e.g., every 30 seconds).
+    \item \textbf{FR1.2:} The Analyzer shall process incoming data to identify roads with significant congestion.
+    \item \textbf{FR1.3:} The system shall dynamically adjust the green/red duration of traffic lights to relieve congestion.
+    \item \textbf{FR1.4:} Each light adjustment shall be recorded by the Logger with a timestamp, location, and duration changes.
+    \item \textbf{FR1.5:} The system shall generate a daily report summarizing traffic flow and Type 1 actions.
+    \item \textbf{FR1.6:} The daily report shall be accessible only by authorized traffic managers.
+    \item \textbf{FR1.7:} The real-time traffic conditions shall be viewable by all users via the application.
+\end{itemize}
+
+\paragraph{3.4.2 Non-Functional Requirements}
+
+\begin{itemize}
+    \item The system shall respond to new sensor data and adjust light durations within 5 seconds.
+    \item The system shall be available 24/7 with at least 99\% uptime.
+    \item The Logger shall ensure secure, persistent, and traceable storage of all records.
+    \item The daily report shall be generated and made available to traffic managers by 00:00 each day.
+    \item The system shall be scalable to manage hundreds of intersections across the city.
+    \item The application interface shall be responsive and usable on both desktop and mobile devices.
+    \item Access to the daily report shall be role-restricted to authorized traffic managers only.
+\end{itemize}
